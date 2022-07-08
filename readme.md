@@ -28,18 +28,21 @@ para validar a que se tiene acceso
 Revision de temas del proyecto True 
 por solicitud de analisis
 ----------------------------------------------------------
--- realmente el problema fue que otro equipo borro el pod?
+>
+- realmente el problema fue que otro equipo borro el pod?
 >
 son riesgos generales (sin saber la configuracion del AKS)
--- riesgos en la configuracion que no tomen encuenta cada una de las aplicaciones
-	-- reglas de firewall
--- No se manejan roles especificadas por namespace? o se manejan accesos genericos?
--- No se tiene perfilado cada equipo de trabajo
--- las aplicaciones se ecnuentran organizadas a traves de namespaces?
+>
+- riesgos en la configuracion que no tomen encuenta cada una de las aplicaciones
+	- reglas de firewall
+- No se manejan roles especificos por namespace? o se manejan accesos genericos?
+- No se tiene perfilado cada equipo de trabajo
+- las aplicaciones se encuentran organizadas a traves de namespaces?
 >
 >
 Identificar
--- criticidad del negocio y carga transaccional de True
--- como esta distribuido el cluster
+>
+- criticidad del negocio y carga transaccional de True
+- como esta distribuido el cluster
 
 
