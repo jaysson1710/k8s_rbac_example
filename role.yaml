@@ -1,0 +1,37 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: pod-read-role
+  namespace: default
+rules:
+  - verbs:
+      - '*'
+    apiGroups:
+      - ''
+      - apps
+      - batch
+      - networking.k8s.io
+    resources:
+      - '*'
+
+
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: pod-read-sa
+
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: pod-read-rolebinding
+  namespace: default ## namespace donde aplica el rol
+subjects:
+- kind: ServiceAccount
+  name: pod-read-sa
+  apiGroup: ""
+roleRef:
+  kind: Role
+  name: pod-read-role
+  apiGroup: ""
